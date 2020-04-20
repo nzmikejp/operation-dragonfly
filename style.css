@@ -56,6 +56,11 @@
   background-color: #34393D;
 }
 
+.app .back {
+  font-size: 1.2em;
+  color: #425461;
+}
+
 h1, h4, p {
   color: #425461;
   font-family: "Roboto Condensed", sans-serif;
@@ -218,10 +223,8 @@ nav ul a i {
   padding: 0;
 }
 
-nav i {
+nav .back {
   padding: 1rem;
-  font-size: 1.2em;
-  color: #425461;
 }
 
 nav.hide {

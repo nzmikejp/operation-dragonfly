@@ -73,6 +73,11 @@ $main-font: 'Roboto Condensed', sans-serif;
             background-color: $dark-color;
         }
     }
+
+    .back {
+        font-size: 1.2em;
+        color: $main-color;
+    }
 }
 
 //global setting
@@ -209,10 +214,8 @@ nav {
         }
     }
 
-    i {
+    .back {
         padding: 1rem;
-        font-size: 1.2em;
-        color: $main-color;
     }
 
     &.hide {
