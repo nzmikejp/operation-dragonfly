@@ -34,7 +34,7 @@
 }
 
 .app footer {
-  min-height: 3em;
+  min-height: 3.7em;
   -webkit-box-shadow: 0px -10px 30px -20px rgba(0, 0, 0, 0.2);
           box-shadow: 0px -10px 30px -20px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -46,7 +46,7 @@
   border-radius: 2em;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.7em 2.5em;
+  padding: 1em 2.5em;
   -webkit-transition: ease 0.3s all;
   transition: ease 0.3s all;
 }
@@ -129,6 +129,23 @@ footer {
   padding: 1em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+footer .i-chat {
+  position: relative;
+}
+
+footer .i-chat:after {
+  content: '5';
+  font-size: 0.8em;
+  background-color: #761925;
+  color: #FFFFFF;
+  position: absolute;
+  right: -0.9rem;
+  bottom: -0.4rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #FFFFFF solid;
 }
 
 main {
@@ -229,6 +246,27 @@ nav .back {
 
 nav.hide {
   left: -100%;
+}
+
+.home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .main-logo {
+  margin: auto;
+}
+
+.home .you-matter {
+  margin: 2em auto 2.8em auto;
+  width: 65%;
 }
 
 .snacks h1 {
