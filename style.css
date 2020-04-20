@@ -61,8 +61,14 @@
   color: #425461;
 }
 
-h1, h4, p {
+h1, h4 {
   color: #425461;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  color: #34393D;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
 }
@@ -266,10 +272,56 @@ nav.hide {
 
 .home .you-matter {
   margin: 2em auto 2.8em auto;
-  width: 65%;
+  width: 8.5em;
 }
 
-.snacks h1 {
-  color: red;
+.signup .container {
+  padding: 0;
+}
+
+.signup .container > div {
+  padding: 1em;
+}
+
+.signup .container > div .logo {
+  width: 7.8em;
+  margin: auto;
+}
+
+.signup .container .form-group input[type="text"], .signup .container .form-group input[type="password"] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.signup .container .back {
+  padding: 1em;
+}
+
+.signup .container .divider {
+  border-bottom: #FFFFFF 0.125em solid;
+  padding: 0;
+}
+
+.signup .container .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup .container .cta-image {
+  width: 1.75em;
+  mix-blend-mode: multiply;
+  margin-right: 0.5em;
+}
+
+.signup .container .l-fixed-width {
+  width: 14em;
 }
 /*# sourceMappingURL=style.css.map */

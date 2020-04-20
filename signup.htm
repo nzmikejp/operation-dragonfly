@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign up | Dragonfly</title>
+</head>
+<body>
+    <div class="app signup">
+        <main>
+            <div class="container">
+                <a href="#"><i class="fas fa-chevron-left back"></i></a>
+                <div>
+                    <img class="logo" src="./assets/main-logo.svg" alt="Dragonfly Logo">
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Name:" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="email" id="email" placeholder="Email:" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" placeholder="Password:" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" name="terms" id="terms" required="">
+                            <label for="terms">By clicking this box your accept our Terms & Conditions.</label>
+                        </div>
+        
+                        <div class="form-group">
+                            <input class="cta" type="submit" value="sign up">
+                        </div>
+                    </form>
+                    <a href="greeting.htm">Already have an account? - Sign in</a>
+                </div>
+                <div class="divider"></div>
+                <div>
+                    <p>or connect using your account logins</p>
+                    <a class="cta l-fixed-width" href="greeting.htm">
+                        <img class="cta-image" src="./assets/google-logo.png" alt="Google Logo">
+                        connect using google
+                    </a>
+                    <a class="cta l-fixed-width" href="greeting.htm">
+                        <img class="cta-image" src="./assets/facebook-logo.png" alt="Google Logo">
+                        connect using facebook
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        //when clicking on bars, remove class hide from nav
+        $('.i-settings').on('click',function(){
+            $('nav').removeClass('hide')
+        })
+
+        //when clicking on cross, add class hide from nav
+        $('.fa-chevron-left').on('click',function(){
+            $('nav').addClass('hide')
+        })
+
+    </script>
+</body>
+</html>
