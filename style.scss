@@ -1,0 +1,237 @@
+$main-color: #425461;
+$dark-color: #34393D;
+$light-color: #FFFFFF;
+$light-color-20: #F2F2F2;
+$light-color-40: #DADADA;
+$accent-color-dark: #761925;
+$accent-color-light: #EFE9C2;
+
+$bg-linear-gradient: 180deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 100%;
+
+$main-font: 'Roboto Condensed', sans-serif;
+
+@mixin bg-gradient {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.015) 45%, rgba(0, 0, 0, 0.015) 55%, rgba(0, 0, 0, 0) 55%), linear-gradient($light-color-20, rgba(0, 0, 0, 0));
+    background-size: 0.7em 0.7em, cover;
+}
+
+@mixin main-font($weight) {
+    font-family: $main-font;
+    font-weight: $weight;
+}
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//app layout module
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        min-height: 3em;
+        box-shadow: 0px 10px 30px -20px rgba(0,0,0,0.2);
+        position: relative;
+        z-index: 80;
+    }
+
+    main {
+        flex: 1 0 auto;
+        position: relative;
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+
+    footer {
+        min-height: 3em;
+        box-shadow: 0px -10px 30px -20px rgba(0,0,0,0.2);
+        position: relative;
+    }
+
+    .cta {
+        display: inline-block;
+        border: thin $dark-color solid;
+        border-radius: 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0.7em 2.5em;
+        transition: ease 0.3s all;
+
+        &:hover {
+            color: $light-color;
+            background-color: $dark-color;
+        }
+    }
+}
+
+//global setting
+
+h1, h4, p {
+    color: $main-color;
+    @include main-font(400)
+}
+
+a {
+    font-size: 0.9375em;
+    @include main-font(400);
+    color: $dark-color;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+//header setting
+
+header {
+    background-color: $light-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+    
+    & > div {
+        display: flex;   
+    }
+
+    .i-logo {
+        height: 1.8em;
+    }
+
+    .i-music {
+        cursor: pointer;
+    }
+
+    .i-settings {
+        margin-left: 1em;
+        cursor: pointer;
+    }
+}
+
+//footer setting
+
+footer {
+    background-color: $light-color;
+    color: $light-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+//main setting
+
+main {
+    @include bg-gradient();
+    .container {
+        box-sizing: border-box;
+        padding: 1em;
+    }
+}
+
+//nav setting
+
+nav {
+    @include bg-gradient();
+    background-color: $light-color;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    text-align: left;
+    transition: ease 0.3s all;
+    box-sizing: border-box;
+    overflow-y: scroll;
+
+    & > div:first-child {
+        @include flex(flex-start, center);
+        text-align: center;
+        background-color: $light-color-40;
+        border-bottom: 0.125em solid $light-color;
+
+        h1 {
+            margin: 0 calc(50% - 3.8em);
+            // transform: translate(-30%);
+            display: block;
+            font-size: 1.25em;
+        }
+    }
+
+    & > div:last-child {
+        text-align: center;
+        padding: 2em 0 3em 0;
+
+        p {
+            margin: 0;
+            font-size: 0.7em;
+        }
+
+        h4 {
+            margin: 0.2em 0 1em 0;
+            font-size: 0.9em;
+        }
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style-type:none;
+        text-align: left;
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            color: $dark-color;
+            text-decoration: none;
+            border-bottom: 0.125em solid $light-color;
+
+            i {
+                padding: 0;
+            }
+        }
+    }
+
+    i {
+        padding: 1rem;
+        font-size: 1.2em;
+        color: $main-color;
+    }
+
+    &.hide {
+        left: -100%;
+    }
+
+}
+
+//style specific to home page
+
+.home {
+    
+}
+
+//style specific to snacks page
+
+.snacks {
+    h1 {
+        color:red;
+    }
+}
+

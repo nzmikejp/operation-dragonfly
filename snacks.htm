@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app snacks">
+        <header>
+            <i class="fas fa-bacon"></i>
+            <i class="fas fa-bars"></i>
+            <nav class="hide">
+                <i class="fas fa-times"></i>
+                <ul>
+                    <li><a href="home.htm">Home</a></li>
+                    <li><a href="snacks.htm">Snacks</a></li>
+                    <li><a href="">Mains</a></li>
+                    <li><a href="">Deserts</a></li>
+                    <li><a href="">Your order</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <h1>Snacks</h1>
+               
+            </div>
+        </main>
+        <footer>
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        //when clicking on bars, remove class hide from nav
+        $('.fa-bars').on('click',function(){
+            $('nav').removeClass('hide')
+        })
+
+        //when clicking on cross, add class hide from nav
+        $('.fa-times').on('click',function(){
+            $('nav').addClass('hide')
+        })
+
+    </script>
+</body>
+</html>

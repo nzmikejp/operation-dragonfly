@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <img class="i-logo" src="./assets/i-logo.svg" alt="logo">
+            <div>
+                <a href="#"><img class="i-music" src="./assets/i-music.svg" alt="music icon"></a>
+                <img class="i-settings" src="./assets/i-settings.svg" alt="settings icon">      
+            </div> 
+            <nav class="hide">
+                <div>
+                    <i class="fas fa-chevron-left"></i>
+                    <h1>Settings</h1>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">Account Settings
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Notifications<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Language<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Support Network<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Downloads<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Linked Accounts<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Alert Settings<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Terms & Conditions<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">My Data<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                </ul>
+                <div>
+                    <p>Logged in as</p>
+                    <h4>janedoe@gmail.com</h4>
+                    <a class="cta" href="#">log out</a>
+                </div>
+            </nav>   
+        </header>
+        <main>
+            <div class="container">
+                <h1>Lorem.</h1>
+                <h1>Eveniet!</h1>
+                <h1>Ullam?</h1>
+                <h1>Placeat!</h1>
+                <h1>Vel?</h1>
+                <h1>Recusandae.</h1>
+                <h1>Voluptas.</h1>
+                <h1>Omnis?</h1>
+                <h1>Dolorem?</h1>
+                <h1>Accusantium?</h1>
+                <h1>Lorem.</h1>
+                <h1>Eveniet!</h1>
+                <h1>Ullam?</h1>
+                <h1>Placeat!</h1>
+                <h1>Vel?</h1>
+                <h1>Recusandae.</h1>
+                <h1>Voluptas.</h1>
+                <h1>Omnis?</h1>
+                <h1>Dolorem?</h1>
+                <h1>Accusantium?</h1>
+            </div>
+        </main>
+        <footer>
+            <a href="dashboard.html"><img class="i-home" src="./assets/i-home.svg" alt="home icon"></a>
+            <a href="explore.html"><img class="i-explore" src="./assets/i-explore.svg" alt="explore icon"></a>
+            <a href="chat.html"><img class="i-chat" src="./assets/i-chat.svg" alt="chat icon"></a>
+            <a href="profile.html"><img class="i-user" src="./assets/i-user.svg" alt="user icon"></a>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        //when clicking on bars, remove class hide from nav
+        $('.i-settings').on('click',function(){
+            $('nav').removeClass('hide')
+        })
+
+        //when clicking on cross, add class hide from nav
+        $('.fa-chevron-left').on('click',function(){
+            $('nav').addClass('hide')
+        })
+
+    </script>
+</body>
+</html>
