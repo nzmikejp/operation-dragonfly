@@ -74,6 +74,45 @@ $main-font: 'Roboto Condensed', sans-serif;
         }
     }
 
+    .cta-wrapper {
+        @include flex(center, center)
+    }
+
+    .cta-split--left {
+        display: block;
+        color: $main-color;
+        border: thin $main-color solid;
+        border-radius: 2em 0  0 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1em 2.5em;
+        transition: ease 0.3s all;
+
+        &:hover {
+            color: $light-color;
+            border: thin $accent-color-dark solid;
+            background-color: $accent-color-dark;
+        }
+    }
+
+    .cta-split--right {
+        display: block;
+        color: $light-color;
+        background-color: $main-color;
+        border: thin $main-color solid;
+        border-radius: 0 2em 2em 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1em 2.5em;
+        transition: ease 0.3s all;
+
+        &:hover {
+            color: $light-color;
+            border: thin $accent-color-dark solid;
+            background-color: $accent-color-dark;
+        }
+    }
+
     .back {
         font-size: 1.2em;
         color: $main-color;
