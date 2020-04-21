@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Support Network Setup | Dragonfly</title>
+</head>
+<body>
+    <div class="app support">
+        <main>
+            <div class="container-padding--0">
+                <a href="greeting.htm"><i class="fas fa-chevron-left btn-back"></i></a>
+                <div class="container-content l-divider--after">
+                    
+                </div>
+                <div class="container-content">
+                    <p>You can edit all your Support Network details under your setting tab in your dashboard.</p>
+                    <a href="challenge.htm" class="cta">Next</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        //when clicking on bars, remove class hide from nav
+        $('.i-settings').on('click',function(){
+            $('nav').removeClass('hide')
+        })
+
+        //when clicking on cross, add class hide from nav
+        $('.fa-chevron-left').on('click',function(){
+            $('nav').addClass('hide')
+        })
+
+    </script>
+</body>
+</html>
