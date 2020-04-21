@@ -204,6 +204,14 @@ $main-font: 'Roboto Condensed', sans-serif;
         font-style: italic;
     }
 
+    .l-padding-top--0 {
+        padding-top: 0;
+    }
+
+    .l-padding-top--1 {
+        padding-top: 1em;
+    }
+
 }
 
 //global setting
@@ -212,7 +220,7 @@ $main-font: 'Roboto Condensed', sans-serif;
     box-sizing: border-box;
 }
 
-h1, h2, h4 {
+h1, h2, h3, h4 {
     color: $main-color;
     @include main-font(400);
 }
@@ -226,6 +234,10 @@ h2 {
     margin: 0.5em 0;
 }
 
+h3 {
+    font-size: 1.06em;
+}
+
 h5 {
     color: $main-color;
     @include main-font(300);
@@ -235,7 +247,8 @@ h5 {
 p {
     color: $dark-color;
     @include main-font(400);
-    font-size: 0.8em;
+    font-size: 0.75em;
+    text-align: center;
 }
 
 a {
@@ -247,6 +260,7 @@ a {
 img {
     max-width: 100%;
     display: block;
+    margin: 0 auto;
 }
 
 //header setting
@@ -318,8 +332,8 @@ main {
     }
 
     .container-content {
-        padding: 1.5em 1em;
-        text-align: center;;
+        padding: 0 1em 1.5em 1em;
+        text-align: center;
     }
 }
 
@@ -405,10 +419,6 @@ nav {
         @include flex(center, center);
     }
         
-    .main-logo {
-        margin: auto;
-    }
-
     .you-matter {
         margin: 2em auto 2.8em auto;
         width: 8.5em;
@@ -419,12 +429,9 @@ nav {
 
 .signup {
     .container-padding--0 {
-
-
         & > div:first-of-type {
             .logo {
                 width: 7.8em;
-                margin: auto;
             }
 
             a {
@@ -438,7 +445,6 @@ nav {
         & > div:last-of-type {
             p {
                 margin: 0;
-                font-size: 0.7em;
             }
 
             a {
@@ -461,7 +467,6 @@ nav {
 
 .greeting {
     .container-content {
-        padding-top: 0;
         padding-bottom: 3em;
     }
 
@@ -499,14 +504,9 @@ nav {
 
         p {
             font-weight: 300;
-            font-size: 0.7em;
             width: 80%;
             margin: auto;
             padding-top: 0.5em;
-        }
-
-        img {
-            margin: auto;
         }
     }
 }
@@ -514,5 +514,19 @@ nav {
 //style specific to support page
 
 .support {
-    
+    h3 {
+        padding: 1em;
+        margin: 0;
+    }
+
+    h5 {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        width: 80%;
+        margin: auto;
+        padding: 1em;
+    }
 }
