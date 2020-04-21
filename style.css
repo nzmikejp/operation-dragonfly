@@ -61,6 +61,95 @@
   color: #425461;
 }
 
+.app form .form-group {
+  text-align: center;
+}
+
+.app form .form-group:first-child {
+  margin-top: 2em;
+}
+
+.app form .form-group:last-child {
+  margin: 1em 0;
+}
+
+.app form .form-group input[type="text"], .app form .form-group input[type="password"] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 150%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: thin #34393D solid;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  color: #34393D;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.app form .form-group input[type="text"]:focus, .app form .form-group input[type="password"]:focus {
+  outline: none;
+}
+
+.app form .form-group input[type="submit"] {
+  margin: auto;
+  background-color: transparent;
+  color: #34393D;
+  font-family: "Roboto Condensed", sans-serif;
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
+}
+
+.app form .form-group input[type="submit"]:hover {
+  background-color: #34393D;
+  color: #FFFFFF;
+}
+
+.app form .form-group label {
+  color: #34393D;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.6em;
+}
+
+.app .l-divider--after {
+  position: relative;
+}
+
+.app .l-divider--after::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border: #FFFFFF 0.125em solid;
+}
+
+.app .l-divider--before {
+  position: relative;
+}
+
+.app .l-divider--before::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: #FFFFFF 0.125em solid;
+}
+
+.app .btn-back {
+  padding: 1em;
+}
+
+.app .l-fixed-width--19 {
+  max-width: 19em;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 h1, h4 {
   color: #425461;
   font-family: "Roboto Condensed", sans-serif;
@@ -97,8 +186,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 header > div {
@@ -133,8 +220,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 footer .i-chat {
@@ -160,9 +245,16 @@ main {
 }
 
 main .container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 1em;
+}
+
+main .container-padding--0 {
+  padding: 0;
+}
+
+main .container-content {
+  padding: 1.5em 1em;
+  text-align: center;
 }
 
 nav {
@@ -178,8 +270,6 @@ nav {
   text-align: left;
   -webkit-transition: ease 0.3s all;
   transition: ease 0.3s all;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   overflow-y: scroll;
 }
 
@@ -275,35 +365,28 @@ nav.hide {
   width: 8.5em;
 }
 
-.signup .container {
-  padding: 0;
-}
-
-.signup .container > div {
-  padding: 1em;
-}
-
-.signup .container > div .logo {
+.signup .container-padding--0 > div:first-of-type .logo {
   width: 7.8em;
   margin: auto;
 }
 
-.signup .container .form-group input[type="text"], .signup .container .form-group input[type="password"] {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.signup .container-padding--0 > div:first-of-type a {
+  font-size: 0.7em;
+  text-align: center;
+  text-decoration: none;
+  display: block;
 }
 
-.signup .container .back {
-  padding: 1em;
+.signup .container-padding--0 > div:last-of-type p {
+  margin: 0;
+  font-size: 0.7em;
 }
 
-.signup .container .divider {
-  border-bottom: #FFFFFF 0.125em solid;
-  padding: 0;
+.signup .container-padding--0 > div:last-of-type a {
+  margin: 1em auto;
 }
 
-.signup .container .cta {
+.signup .container-padding--0 .cta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,13 +398,8 @@ nav.hide {
           align-items: center;
 }
 
-.signup .container .cta-image {
+.signup .container-padding--0 .cta-image {
   width: 1.75em;
-  mix-blend-mode: multiply;
   margin-right: 0.5em;
-}
-
-.signup .container .l-fixed-width {
-  width: 14em;
 }
 /*# sourceMappingURL=style.css.map */

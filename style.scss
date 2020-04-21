@@ -79,9 +79,97 @@ $main-font: 'Roboto Condensed', sans-serif;
         color: $main-color;
     }
 
+    form {
+        .form-group {
+            text-align: center;
+
+            &:first-child {
+                margin-top: 2em;
+            }
+
+            &:last-child {
+                margin: 1em 0;
+            }
+
+            input[type="text"], input[type="password"] {
+                width: 100%;
+                box-sizing: border-box;
+                line-height: 150%;
+                background-color: transparent;
+                border: 0;
+                border-bottom: thin $dark-color solid;
+                padding: 0.5em ;
+                margin-bottom: 0.5em;
+                color: $dark-color;
+                font-family: $main-font;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            input[type="submit"] {
+                margin: auto;
+                background-color: transparent;
+                color: $dark-color;
+                font-family: $main-font;
+                transition: ease 0.3s all;
+
+                &:hover {
+                    background-color: $dark-color;
+                    color: $light-color;
+                }
+            }
+
+            label {
+                color: $dark-color;
+                font-family: $main-font;
+                font-size: 0.6em;
+            }
+        }
+    }
+
+    .l-divider--after {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border: $light-color 0.125em solid;
+
+        }
+    }
+
+    .l-divider--before {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border: $light-color 0.125em solid;
+
+        }
+    }
+
+    .btn-back {
+        padding: 1em;
+    }
+
+    .l-fixed-width--19 {
+        max-width: 19em;
+    }
+
 }
 
 //global setting
+
+* {
+    box-sizing: border-box;
+}
 
 h1, h4 {
     color: $main-color;
@@ -112,7 +200,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    box-sizing: border-box;
     
     & > div {
         display: flex;   
@@ -141,7 +228,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    box-sizing: border-box;
+
 
     .i-chat {
         position: relative;
@@ -166,8 +253,16 @@ footer {
 main {
     @include bg-gradient();
     .container {
-        box-sizing: border-box;
         padding: 1em;
+    }
+
+    .container-padding--0 {
+        padding: 0;
+    }
+
+    .container-content {
+        padding: 1.5em 1em;
+        text-align: center;;
     }
 }
 
@@ -184,7 +279,6 @@ nav {
     z-index: 90;
     text-align: left;
     transition: ease 0.3s all;
-    box-sizing: border-box;
     overflow-y: scroll;
 
     & > div:first-child {
@@ -267,33 +361,32 @@ nav {
 //style specific to signup page
 
 .signup {
-    .container {
-        padding: 0;
+    .container-padding--0 {
 
-        & > div {
-            padding: 1em;
 
+        & > div:first-of-type {
             .logo {
                 width: 7.8em;
                 margin: auto;
             }
-        }
 
-        .form-group {
-
-            input[type="text"], input[type="password"] {
-                width: 100%;
-                box-sizing: border-box;
+            a {
+                font-size: 0.7em;
+                text-align: center;
+                text-decoration: none;
+                display: block;
             }
         }
 
-        .back {
-            padding: 1em;
-        }
+        & > div:last-of-type {
+            p {
+                margin: 0;
+                font-size: 0.7em;
+            }
 
-        .divider {
-            border-bottom: $light-color 0.125em solid;
-            padding: 0;
+            a {
+                margin: 1em auto;
+            }
         }
 
         .cta {
@@ -302,13 +395,10 @@ nav {
 
         .cta-image {
             width: 1.75em;
-            mix-blend-mode: multiply;
             margin-right: 0.5em;
-        }
-        
-        .l-fixed-width {
-            width: 14em;
         }
     }
 }
+
+//style specific to greeting page
 
