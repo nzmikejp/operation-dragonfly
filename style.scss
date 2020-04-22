@@ -120,7 +120,7 @@ $main-font: 'Roboto Condensed', sans-serif;
         }
     }
 
-    .cta-add {
+    .cta-round {
         @include flex(center, center);
         width: 42px;
         height: 42px;
@@ -212,6 +212,30 @@ $main-font: 'Roboto Condensed', sans-serif;
             flex: 1 0 auto;
             display: block;
             font-family: $main-font;
+        }
+    }
+
+    .card {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        margin-top: 1em;
+
+        .card-item {
+            flex: 1 0 20%;
+            align-self: flex-end;
+        }
+
+        .card-image {
+        }
+
+        .card-content {
+            h3 {
+                padding: 0.5em;
+            }
+
+            p {
+               padding-top: 0; 
+            }
         }
     }
 

@@ -112,7 +112,7 @@
   background-color: #761925;
 }
 
-.app .cta-add {
+.app .cta-round {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,12 +126,12 @@
   height: 42px;
 }
 
-.app .cta-add a {
+.app .cta-round a {
   text-decoration: none;
   display: block;
 }
 
-.app .cta-add i {
+.app .cta-round i {
   padding: 0.4em 0.45em;
   font-size: 1.2em;
   border: 3px #425461 solid;
@@ -141,7 +141,7 @@
   transition: ease 0.3s all;
 }
 
-.app .cta-add:hover i {
+.app .cta-round:hover i {
   color: #FFFFFF;
   background-color: #425461;
 }
@@ -222,6 +222,37 @@
           flex: 1 0 auto;
   display: block;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+.app .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.app .card .card-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.app .card .card-content h3 {
+  padding: 0.5em;
+}
+
+.app .card .card-content p {
+  padding-top: 0;
 }
 
 .app .l-divider--after {
