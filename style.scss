@@ -257,6 +257,10 @@ $main-font: 'Roboto Condensed', sans-serif;
         padding-top: 1em;
     }
 
+    .l-margin-top--0 {
+        margin-top: 0;
+    }
+
 }
 
 //global setting
@@ -583,5 +587,26 @@ nav {
 //style specific to challenge page
 
 .challenge {
-    
+    h3 {
+        padding: 1em;
+        margin: 0;
+    }
+
+    h5 {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        width: 80%;
+        margin: auto;
+        padding-top: 1em;
+    }
+
+    .skip {
+        display: block;
+        text-decoration: none;
+        font-size: 0.75em;
+        margin-top: 1em;
+    }
 }
