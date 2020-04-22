@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Challenge Setup | Dragonfly</title>
+</head>
+<body>
+    <div class="app challenge">
+        <main>
+            <div class="container-padding--0">
+                <a href="greeting.htm"><i class="fas fa-chevron-left btn-back"></i></a>
+                <div class="container-content l-divider--after">
+                    <h3 class="l-padding-top--0">Let’s take a moment to setup your mood buddy & support network</h3>
+                    <img src="./assets/support-friends.svg" alt="Support Friends">
+                    <h3>Mood Buddy</h3>
+                    <h5>
+                        Your Mood Buddy is a vital way of letting the most important people close to you know how you are feeling during the day.  Mood Buddy helps them reach out to you when your feeling low and provide the comprehensive support you need.
+                    </h5>
+                    <div class="user-input">
+                        <input type="text" name="name" id="name" placeholder="Enter Buddy Name:">
+                        <div class="cta-add">
+                            <a href="#">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        To connect with your buddy, they too will need to have an active Dragonfly account installed on their device.
+                    </p>
+                </div>
+                <div class="container-content">
+                    <h3>Support Network</h3>
+                    <h5>
+                        Your support network are your friends & family that you want to reach out to for support when you’re ready.  No Mood Buddy logs will be sent to this support group.
+                    </h5>
+                    <div class="user-input">
+                        <input type="text" name="name" id="name" placeholder="Enter Name & Phone Number:">
+                        <div class="cta-add">
+                            <a href="#">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        You can edit all your Support Network details under your setting tab in your dashboard.
+                    </p>
+                    <a href="challenge.htm" class="cta">Next</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        //when clicking on bars, remove class hide from nav
+        $('.i-settings').on('click',function(){
+            $('nav').removeClass('hide')
+        })
+
+        //when clicking on cross, add class hide from nav
+        $('.fa-chevron-left').on('click',function(){
+            $('nav').addClass('hide')
+        })
+
+    </script>
+</body>
+</html>
