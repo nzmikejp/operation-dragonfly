@@ -120,6 +120,27 @@ $main-font: 'Roboto Condensed', sans-serif;
         }
     }
 
+    .cta-add {
+        @include flex(center, center);
+        width: 42px;
+        height: 42px;
+        // background-color: red;
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        i {
+            color: $main-font;
+            padding: 0.5em;
+            font-size: 1.2em;
+            border: 3px $main-color solid;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+
     form {
         .form-group {
             text-align: center;
@@ -167,6 +188,23 @@ $main-font: 'Roboto Condensed', sans-serif;
                 font-family: $main-font;
                 font-size: 0.6em;
             }
+        }
+    }
+
+    .user-input {
+        @include flex(space-between, center);
+        background-color: darken($light-color-20, 2%);
+        padding: 0.5em;
+        border-radius: 1.3em;
+        border: thin $light-color solid;
+        margin: 1em 0 0 0;
+
+        input {
+            background-color: transparent;
+            border: 0;
+            padding-left: 1em;
+            flex: 1 0 auto;
+            display: block;
         }
     }
 
@@ -527,6 +565,10 @@ nav {
     p {
         width: 80%;
         margin: auto;
-        padding: 1em;
+        padding-top: 1em;
+    }
+
+    .cta {
+        margin-top: 2em;
     }
 }

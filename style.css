@@ -112,6 +112,34 @@
   background-color: #761925;
 }
 
+.app .cta-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 42px;
+}
+
+.app .cta-add a {
+  text-decoration: none;
+  display: block;
+}
+
+.app .cta-add i {
+  color: "Roboto Condensed", sans-serif;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border: 3px #425461 solid;
+  border-radius: 50%;
+  display: block;
+}
+
 .app form .form-group {
   text-align: center;
 }
@@ -160,6 +188,33 @@
   color: #34393D;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 0.6em;
+}
+
+.app .user-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ededed;
+  padding: 0.5em;
+  border-radius: 1.3em;
+  border: thin #FFFFFF solid;
+  margin: 1em 0 0 0;
+}
+
+.app .user-input input {
+  background-color: transparent;
+  border: 0;
+  padding-left: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: block;
 }
 
 .app .l-divider--after {
@@ -536,6 +591,10 @@ nav.hide {
 .support p {
   width: 80%;
   margin: auto;
-  padding: 1em;
+  padding-top: 1em;
+}
+
+.support .cta {
+  margin-top: 2em;
 }
 /*# sourceMappingURL=style.css.map */
