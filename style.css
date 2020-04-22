@@ -132,12 +132,18 @@
 }
 
 .app .cta-add i {
-  color: "Roboto Condensed", sans-serif;
-  padding: 0.5em;
+  padding: 0.4em 0.45em;
   font-size: 1.2em;
   border: 3px #425461 solid;
   border-radius: 50%;
-  display: block;
+  color: #425461;
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
+}
+
+.app .cta-add:hover i {
+  color: #FFFFFF;
+  background-color: #425461;
 }
 
 .app form .form-group {
@@ -201,8 +207,8 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #ededed;
-  padding: 0.5em;
-  border-radius: 1.3em;
+  padding: 0.4em;
+  border-radius: 1.9em;
   border: thin #FFFFFF solid;
   margin: 1em 0 0 0;
 }
@@ -215,6 +221,7 @@
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   display: block;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .app .l-divider--after {
