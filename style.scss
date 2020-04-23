@@ -790,3 +790,19 @@ nav {
         }    
     }
 }
+
+.profile {
+    .link-item {
+        img {
+            margin: 0;
+            padding-right: 0.5em;
+        }
+
+        a {
+            & > div {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

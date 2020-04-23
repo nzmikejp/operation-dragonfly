@@ -827,4 +827,18 @@ nav.hide {
   max-width: 75%;
   margin: 0 auto;
 }
+
+.profile .link-item img {
+  margin: 0;
+  padding-right: 0.5em;
+}
+
+.profile .link-item a > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */
