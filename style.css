@@ -122,8 +122,12 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 42px;
-  height: 42px;
+  width: 2.625em;
+  height: 2.625em;
+  border: 0.1875em #425461 solid;
+  border-radius: 1.3125em;
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
 }
 
 .cta-round a {
@@ -132,18 +136,16 @@ footer {
 }
 
 .cta-round i {
-  padding: 0.4em 0.45em;
   font-size: 1.2em;
-  border: 3px #425461 solid;
-  border-radius: 50%;
   color: #425461;
-  -webkit-transition: ease 0.3s all;
-  transition: ease 0.3s all;
+}
+
+.cta-round:hover {
+  background-color: #425461;
 }
 
 .cta-round:hover i {
   color: #FFFFFF;
-  background-color: #425461;
 }
 
 form .form-group {
@@ -267,6 +269,33 @@ form .form-group label {
   font-size: 0.65em;
 }
 
+.link-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.link-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  color: #34393D;
+  text-decoration: none;
+  border-bottom: 0.125em solid #FFFFFF;
+}
+
+.link-list a i {
+  padding: 0;
+}
+
 .dash-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,6 +309,7 @@ form .form-group label {
   text-align: center;
   background-color: #DADADA;
   border-bottom: 0.125em solid #FFFFFF;
+  min-height: 3.6em;
 }
 
 .dash-header h1 {
@@ -392,6 +422,7 @@ header > div {
 
 header .i-logo {
   height: 1.8em;
+  margin: 0;
 }
 
 header .i-music {
@@ -440,14 +471,6 @@ main {
   background-size: 0.7em 0.7em, cover;
 }
 
-main .container {
-  padding: 1em;
-}
-
-main .container-padding--0 {
-  padding: 0;
-}
-
 main .container-content {
   padding: 0 1em 1.5em 1em;
   text-align: center;
@@ -488,37 +511,6 @@ nav > div:last-child h4 {
   font-size: 0.9em;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: left;
-}
-
-nav ul a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em;
-  color: #34393D;
-  text-decoration: none;
-  border-bottom: 0.125em solid #FFFFFF;
-}
-
-nav ul a i {
-  padding: 0;
-}
-
-nav .back {
-  padding: 1rem;
-}
-
 nav.hide {
   left: -100%;
 }
@@ -540,30 +532,30 @@ nav.hide {
   width: 8.5em;
 }
 
-.signup .container-padding--0 > div:first-of-type .logo {
+.signup .container > div:first-of-type .logo {
   width: 7.8em;
 }
 
-.signup .container-padding--0 > div:first-of-type a {
+.signup .container > div:first-of-type a {
   font-size: 0.7em;
   text-align: center;
   text-decoration: none;
   display: block;
 }
 
-.signup .container-padding--0 > div:last-of-type {
+.signup .container > div:last-of-type {
   margin-top: 1em;
 }
 
-.signup .container-padding--0 > div:last-of-type p {
+.signup .container > div:last-of-type p {
   margin: 0;
 }
 
-.signup .container-padding--0 > div:last-of-type a {
+.signup .container > div:last-of-type a {
   margin: 1em auto;
 }
 
-.signup .container-padding--0 .cta {
+.signup .container .cta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,7 +567,7 @@ nav.hide {
           align-items: center;
 }
 
-.signup .container-padding--0 .cta-image {
+.signup .container .cta-image {
   width: 1.75em;
   margin-right: 0.5em;
 }
@@ -736,5 +728,103 @@ nav.hide {
 
 .challenge .cta {
   margin-top: 1em;
+}
+
+.dashboard .dash-header {
+  min-height: 2.125em;
+}
+
+.dashboard .dash-header p {
+  margin: 0 auto;
+}
+
+.dashboard .dash-header p span {
+  font-weight: 300;
+  margin-right: 1em;
+}
+
+.dashboard h1 {
+  margin-bottom: 0.3em;
+}
+
+.dashboard h5 {
+  margin: 0;
+}
+
+.dashboard h3 {
+  margin: 0.5em;
+}
+
+.dashboard .card {
+  margin-top: 0;
+}
+
+.dashboard .card .card-item {
+  border-right: thin #F2F2F2 solid;
+  background-color: #DADADA;
+  padding-top: 0.5em;
+  -webkit-transition: ease 0.3s all;
+  transition: ease 0.3s all;
+}
+
+.dashboard .card .card-item:hover {
+  background-color: #e2e2e2;
+}
+
+.dashboard .card .card-item:last-child {
+  border-right: none;
+}
+
+.dashboard .card .card-content p {
+  text-transform: uppercase;
+}
+
+.dashboard .diary-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+}
+
+.dashboard .diary-wrapper .user-input {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.dashboard .diary-wrapper .user-input input {
+  font-size: 0.8em;
+}
+
+.dashboard .diary-wrapper > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .diary-wrapper > div:last-child > div {
+  margin-left: 0.2em;
+}
+
+.dashboard .diary-wrapper > div:last-child .cta-round {
+  border: 0.1875em #DADADA solid;
+  background-color: #DADADA;
+}
+
+.dashboard .diary-wrapper > div:last-child .cta-round:hover {
+  background-color: #425461;
+  border: 3px #425461 solid;
+}
+
+.dashboard .container-content:last-child p {
+  max-width: 75%;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
