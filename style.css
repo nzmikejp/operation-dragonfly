@@ -226,6 +226,10 @@ form .form-group label {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.user-input input:focus {
+  outline: none;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,7 +332,7 @@ form .form-group label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em 0;
+  padding: 1em 0;
 }
 
 .profile-card .profile-wrapper {
@@ -822,7 +826,7 @@ nav.hide {
 }
 
 .dashboard .card .card-item:hover {
-  background-color: #e2e2e2;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .dashboard .card .card-item:last-child {
@@ -877,6 +881,53 @@ nav.hide {
   border: 3px #425461 solid;
 }
 
+.dashboard .mood-dial {
+  padding-top: 1em;
+  position: relative;
+}
+
+.dashboard .mood-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-49%, 9.3em);
+          transform: translate(-49%, 9.3em);
+}
+
+.dashboard .cta-large {
+  width: 4.25em;
+  height: 4.25em;
+  border-radius: 2.15em;
+  background-color: #425461;
+  cursor: pointer;
+}
+
+.dashboard .cta-large a {
+  font-size: 1.2em;
+  color: #FFFFFF;
+}
+
+.dashboard .cta-large:hover {
+  background-color: #761925;
+  border: 0.1875em #761925 solid;
+}
+
+.dashboard .mood-alert {
+  position: absolute;
+  top: 1em;
+  left: 0;
+}
+
 .dashboard .container-content:last-child p {
   max-width: 75%;
   margin: 0 auto;
@@ -885,6 +936,10 @@ nav.hide {
 .chat .container-content {
   border-bottom: 0.125em #FFFFFF solid;
   padding-bottom: 0;
+}
+
+.chat .container-content:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .profile .dash-header + .container-content {

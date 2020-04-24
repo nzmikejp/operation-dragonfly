@@ -7,6 +7,7 @@ $accent-color-dark: #761925;
 $accent-color-light: #EFE9C2;
 
 $bg-linear-gradient: 180deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 100%;
+$bg-hover-tint:  rgba(0,0,0,0.03);
 
 $main-font: 'Roboto Condensed', sans-serif;
 
@@ -213,6 +214,10 @@ form {
         flex: 1 0 auto;
         display: block;
         font-family: $main-font;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 
@@ -279,7 +284,7 @@ form {
 
 .profile-card {
     @include flex(space-between, center);
-    margin: 1em 0;
+    padding: 1em 0;
 
     .profile-wrapper {
         @include flex(flex-start, center)
@@ -775,7 +780,7 @@ nav {
             transition: ease 0.3s all;
 
             &:hover {
-                background-color: lighten($light-color-40, 3%);
+                background-color: $bg-hover-tint;
             }
 
             &:last-child {
@@ -822,6 +827,44 @@ nav {
         }
     }
 
+    .mood-dial {
+        padding-top: 1em;
+        position: relative;
+    }
+
+    .mood-select {
+        @include flex(space-between, center);
+        width: 16em;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-49%, 9.3em);
+    }
+
+    .cta-large {
+        width: 4.25em;
+        height: 4.25em;
+        border-radius: 2.15em;
+        background-color: $main-color;
+        cursor: pointer;
+
+        a {
+            font-size: 1.2em;
+            color: $light-color;
+        }
+    
+        &:hover {
+            background-color: $accent-color-dark;
+            border: 0.1875em $accent-color-dark solid;
+        }
+    }
+
+    .mood-alert {
+        position: absolute;
+        top: 1em;
+        left: 0;
+    }
+
     .container-content:last-child {
         p {
             max-width: 75%;
@@ -838,6 +881,10 @@ nav {
     .container-content {
         border-bottom: 0.125em $light-color solid;
         padding-bottom: 0;
+
+        &:hover {
+            background-color: $bg-hover-tint;
+        }
     }
 }
 
