@@ -320,7 +320,7 @@ form {
         left: 0;
         bottom: 0;
         width: 100%;
-        border: $light-color 0.125em solid;
+        border-bottom: darken($light-color-40, 10%) 0.1em dotted;
 
     }
 }
@@ -867,7 +867,7 @@ nav {
 
     .container-content:last-child {
         p {
-            max-width: 75%;
+            max-width: 80%;
             margin: 0 auto;
         }    
     }

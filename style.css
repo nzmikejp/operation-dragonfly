@@ -374,7 +374,7 @@ form .form-group label {
   left: 0;
   bottom: 0;
   width: 100%;
-  border: #FFFFFF 0.125em solid;
+  border-bottom: #c1c1c1 0.1em dotted;
 }
 
 .l-divider--before {
@@ -929,7 +929,7 @@ nav.hide {
 }
 
 .dashboard .container-content:last-child p {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
