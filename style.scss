@@ -284,6 +284,7 @@ form {
     .profile-wrapper {
         @include flex(flex-start, center)
     }
+
     .profile-image {
         img {
             border-radius: 50%;
@@ -826,6 +827,17 @@ nav {
             max-width: 75%;
             margin: 0 auto;
         }    
+    }
+}
+
+//style specific to explore page
+
+//style specific to chat page
+
+.chat {
+    .container-content {
+        border-bottom: 0.125em $light-color solid;
+        padding-bottom: 0;
     }
 }
 

@@ -882,6 +882,11 @@ nav.hide {
   margin: 0 auto;
 }
 
+.chat .container-content {
+  border-bottom: 0.125em #FFFFFF solid;
+  padding-bottom: 0;
+}
+
 .profile .dash-header + .container-content {
   border-bottom: 0.125em #FFFFFF solid;
   padding-bottom: 0;
