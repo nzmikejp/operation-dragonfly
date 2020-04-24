@@ -268,12 +268,41 @@ form {
     text-align: center;
     background-color: $light-color-40;
     border-bottom: 0.125em solid $light-color;
-    min-height: 3.6em;
+    min-height: 3.2em;
 
     h1 {
         margin: 0 auto;
         display: block;
         font-size: 1.25em;
+    }
+}
+
+.profile-card {
+    @include flex(space-between, center);
+    margin: 1em 0;
+
+    .profile-wrapper {
+        @include flex(flex-start, center)
+    }
+    .profile-image {
+        img {
+            border-radius: 50%;
+            max-width: 3.75em;
+            margin-right: 1em;
+        }
+    }
+
+    .profile-content {
+        h3 {
+            text-align: left;
+            margin: 0;
+            line-height: 130%;
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
     }
 }
 
@@ -441,8 +470,17 @@ nav {
     overflow-y: scroll;
 
     .dash-header {
+        position: relative;
+
+        i {
+            padding: 0;
+            margin-left: 1em;
+        }
+
         h1 {
-            margin: 0 calc(50% - 3.8em);
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
         }
     }
 
@@ -791,17 +829,34 @@ nav {
     }
 }
 
+//style specific to profile page
+
 .profile {
+    .dash-header + .container-content {
+        border-bottom: 0.125em $light-color solid;
+        padding-bottom: 0;
+    }
+
+    .link-list + .container-content {
+        p {
+            max-width: 80%;
+            margin: 0 auto 1em auto;
+        }
+    }
+    
     .link-item {
         img {
             margin: 0;
-            padding-right: 0.5em;
         }
 
         a {
             & > div {
                 display: flex;
                 align-items: center;
+
+                & > div {
+                    width: 2.7em;
+                }
             }
         }
     }

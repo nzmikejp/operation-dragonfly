@@ -309,13 +309,55 @@ form .form-group label {
   text-align: center;
   background-color: #DADADA;
   border-bottom: 0.125em solid #FFFFFF;
-  min-height: 3.6em;
+  min-height: 3.2em;
 }
 
 .dash-header h1 {
   margin: 0 auto;
   display: block;
   font-size: 1.25em;
+}
+
+.profile-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0;
+}
+
+.profile-card .profile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card .profile-image img {
+  border-radius: 50%;
+  max-width: 3.75em;
+  margin-right: 1em;
+}
+
+.profile-card .profile-content h3 {
+  text-align: left;
+  margin: 0;
+  line-height: 130%;
+}
+
+.profile-card .profile-content p {
+  margin: 0;
+  text-align: left;
 }
 
 .l-divider--after {
@@ -492,8 +534,20 @@ nav {
   overflow-y: scroll;
 }
 
+nav .dash-header {
+  position: relative;
+}
+
+nav .dash-header i {
+  padding: 0;
+  margin-left: 1em;
+}
+
 nav .dash-header h1 {
-  margin: 0 calc(50% - 3.8em);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 nav > div:last-child {
@@ -828,9 +882,18 @@ nav.hide {
   margin: 0 auto;
 }
 
+.profile .dash-header + .container-content {
+  border-bottom: 0.125em #FFFFFF solid;
+  padding-bottom: 0;
+}
+
+.profile .link-list + .container-content p {
+  max-width: 80%;
+  margin: 0 auto 1em auto;
+}
+
 .profile .link-item img {
   margin: 0;
-  padding-right: 0.5em;
 }
 
 .profile .link-item a > div {
@@ -840,5 +903,9 @@ nav.hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.profile .link-item a > div > div {
+  width: 2.7em;
 }
 /*# sourceMappingURL=style.css.map */
