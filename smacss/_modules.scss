@@ -17,7 +17,7 @@
 .cta {
     display: inline-block;
     color: $main-color;
-    border: thin $main-color solid;
+    border: 0.08em $main-color solid;
     border-radius: 2em;
     text-decoration: none;
     text-transform: uppercase;
@@ -37,7 +37,7 @@
 .cta-split--left {
     display: block;
     color: $main-color;
-    border: thin $main-color solid;
+    border: 0.08em $main-color solid;
     border-radius: 2em 0  0 2em;
     text-decoration: none;
     text-transform: uppercase;
@@ -46,7 +46,7 @@
 
     &:hover {
         color: $light-color;
-        border: thin $main-color solid;
+        border: 0.08em $main-color solid;
         background-color: $main-color;
     }
 }
@@ -55,7 +55,7 @@
     display: block;
     color: $light-color;
     background-color: $main-color;
-    border: thin $main-color solid;
+    border: 0.08em $main-color solid;
     border-radius: 0 2em 2em 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -64,7 +64,7 @@
 
     &:hover {
         color: $light-color;
-        border: thin $accent-color-dark solid;
+        border: 0.08em $accent-color-dark solid;
         background-color: $accent-color-dark;
     }
 }
