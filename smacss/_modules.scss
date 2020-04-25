@@ -1,0 +1,398 @@
+//app layout module
+
+
+.btn-back {
+    padding: 1em;
+    font-size: 1.2em;
+    color: $main-color;
+    cursor: pointer;
+}
+
+.btn-forward {
+    font-size: 1.2em;
+    color: $main-color;
+    cursor: pointer;
+}
+
+.cta {
+    display: inline-block;
+    color: $main-color;
+    border: thin $main-color solid;
+    border-radius: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    transition: ease 0.3s all;
+
+    &:hover {
+        color: $light-color;
+        background-color: $main-color;
+    }
+}
+
+.cta-wrapper {
+    @include flex(center, center)
+}
+
+.cta-split--left {
+    display: block;
+    color: $main-color;
+    border: thin $main-color solid;
+    border-radius: 2em 0  0 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    transition: ease 0.3s all;
+
+    &:hover {
+        color: $light-color;
+        border: thin $main-color solid;
+        background-color: $main-color;
+    }
+}
+
+.cta-split--right {
+    display: block;
+    color: $light-color;
+    background-color: $main-color;
+    border: thin $main-color solid;
+    border-radius: 0 2em 2em 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    transition: ease 0.3s all;
+
+    &:hover {
+        color: $light-color;
+        border: thin $accent-color-dark solid;
+        background-color: $accent-color-dark;
+    }
+}
+
+.cta-round {
+    @include flex(center, center);
+    width: 2.22em;
+    height: 2.22em;
+    border: 0.1875em $main-color solid;
+    border-radius: 1.3125em;
+    transition: ease 0.3s all;
+
+    i {
+        font-size: 1em;
+        color: $main-color;
+    }
+
+    &:hover {
+        background-color: $main-color;
+
+        i {
+            color: $light-color;
+        }
+    }
+}
+
+.checkbox{
+    width: 2.5em;
+    height: 2.5em;
+
+    input{
+        display: none;
+    }
+
+    label{
+        border: 0.1em $light-color-40 solid;
+        display: block;
+        border-radius: 2em;
+        transition: all ease 0.5s;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    label:before{
+        content: url(./assets/i-check.svg);
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0.5em;
+    }
+
+    input:checked + label:before{
+        display: block;
+    }
+}
+
+form {
+    .form-group {
+        text-align: center;
+
+        &:first-child {
+            margin-top: 2em;
+        }
+
+        &:last-child {
+            margin: 1em 0;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            box-sizing: border-box;
+            line-height: 150%;
+            background-color: transparent;
+            border: 0;
+            border-bottom: thin $dark-color solid;
+            padding: 0.5em ;
+            margin-bottom: 0.5em;
+            color: $dark-color;
+            font-family: $main-font;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input[type="submit"] {
+            margin: auto;
+            background-color: transparent;
+            color: $main-color;
+            font-family: $main-font;
+            transition: ease 0.3s all;
+
+            &:hover {
+                background-color: $main-color;
+                color: $light-color;
+            }
+        }
+
+        label {
+            color: $dark-color;
+            font-family: $main-font;
+            font-size: 0.6em;
+        }
+    }
+}
+
+.user-input {
+    @include flex(space-between, center);
+    background-color: darken($light-color-20, 2%);
+    padding: 0.4em;
+    border-radius: 1.9em;
+    border: thin $light-color solid;
+    margin: 1em 0 0 0;
+
+    input {
+        background-color: transparent;
+        border: 0;
+        padding-left: 1em;
+        flex: 1 0 auto;
+        display: block;
+        font-family: $main-font;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.card {
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+    margin-top: 1em;
+
+    .card-image {
+        min-height: 1.8em;
+        @include flex(center, center)
+    }
+
+    .card-item {
+        flex: 1 0 20%;
+    }
+
+    .card-content {
+        h3 {
+            padding: 0.5em;
+        }
+
+        p {
+            padding-top: 0;
+            font-size: 0.65em;
+        }
+    }
+}
+
+.v-card {
+    .v-card-header {
+        @include flex(space-between, flex-start);
+        text-align: left; 
+        margin: 1.5em 0 0.5em 0;
+
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 1em 0 0 0;
+        }
+    }
+
+    .v-card-feature {
+        min-height: 8em;
+        flex: 1 0 auto;
+        border-radius: 0.4em;
+        @include flex(flex-start, flex-end);
+        overflow: hidden;
+    }
+
+    .v-card-cta {
+        flex: 0 0 50%;
+        height: 2.5em;
+        border-radius: 0.4em 0.4em 0.4em 0;
+        background-color: rgba(255,255,255,0.9);
+        @include flex(flex-start, center);
+
+        h3 {
+            margin: 0;
+            font-size: 0.8em;
+            text-align: left;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.6em;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+
+    .v-card-section {
+        margin-top: 1em;
+        @include flex(flex-start, flex-start);
+
+        & > div:first-child {
+             margin-left: 0;
+        }
+
+        & > div:last-child {
+             margin-right: 0;
+        }
+    }
+
+    .v-card-item {
+        flex: 1 0 30%;
+        margin: 0 0.25em;
+
+        p {
+            text-align: left;
+            font-size: 0.65em;
+        }
+    }
+
+    .v-card-image {
+        height: 6.4375em;
+        border-radius: 0.4em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: ease 0.3s all;
+        }
+
+        &:hover {
+            &:after {
+                background-color: rgba(0,0,0,0.3);  
+            }
+        }
+    }
+
+    .cta-round {
+        width: 1.7em;
+        height: 1.7em;
+        border: 0;
+        border-radius: 1em;
+        background-color: $main-color;
+        margin: 0 0.5em 0 1em;
+        cursor: pointer;
+
+        i {
+            font-size: 0.5em;
+            color: $light-color;
+        }
+
+        &:hover {
+            background-color: darken($light-color-40, 40%);
+        }
+    }
+}
+
+.link-list {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    text-align: left;
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        color: $dark-color;
+        text-decoration: none;
+        border-bottom: 0.125em solid $light-color;
+
+        i {
+            padding: 0;
+        }
+    }
+}
+
+.dash-header {
+    @include flex(flex-start, center);
+    text-align: center;
+    background-color: $light-color-40;
+    border-bottom: 0.125em solid $light-color;
+    min-height: 2.5em;
+
+    h1 {
+        margin: 0 auto;
+        display: block;
+        font-size: 1.1em;
+    }
+}
+
+.profile-card {
+    @include flex(space-between, center);
+    padding: 0.6em 0;
+
+    .profile-wrapper {
+        @include flex(flex-start, center)
+    }
+
+    .profile-image {
+        img {
+            border-radius: 50%;
+            max-width: 3.75em;
+            margin-right: 1em;
+        }
+    }
+
+    .profile-content {
+        h3 {
+            text-align: left;
+            margin: 0;
+            line-height: 130%;
+            font-size: 0.9em;
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
+    }
+}

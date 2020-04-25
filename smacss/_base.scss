@@ -1,0 +1,84 @@
+$main-color: #425461;
+$dark-color: #34393D;
+$light-color: #FFFFFF;
+$light-color-20: #F2F2F2;
+$light-color-40: #DADADA;
+$accent-color-dark: #761925;
+$accent-color-light: #EFE9C2;
+
+$bg-linear-gradient: 180deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 100%;
+$bg-hover-tint:  rgba(0,0,0,0.03);
+
+$main-font: 'Roboto Condensed', sans-serif;
+
+@mixin bg-gradient {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.015) 45%, rgba(0, 0, 0, 0.015) 55%, rgba(0, 0, 0, 0) 55%), linear-gradient($light-color-20, rgba(0, 0, 0, 0));
+    background-size: 0.7em 0.7em, cover;
+}
+
+@mixin main-font($weight) {
+    font-family: $main-font;
+    font-weight: $weight;
+}
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin bg-image($image, $position) {
+    background-image: $image;
+    background-position: $position;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+//global setting
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    color: $main-color;
+    @include main-font(400);
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+h3 {
+    font-size: 1.06em;
+}
+
+h5 {
+    color: $main-color;
+    @include main-font(300);
+    font-size: 0.9em;
+}
+
+p {
+    color: $dark-color;
+    @include main-font(400);
+    font-size: 0.75em;
+    text-align: center;
+}
+
+a {
+    font-size: 0.9375em;
+    @include main-font(400);
+    color: $dark-color;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
