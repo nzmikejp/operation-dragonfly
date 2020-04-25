@@ -3,19 +3,14 @@
           box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
   color: #425461;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
 }
 
-h1 {
-  font-size: 1.3em;
-}
-
 h2 {
   font-size: 1.2em;
-  margin: 0.5em 0;
 }
 
 h3 {
@@ -716,11 +711,12 @@ nav .dash-header i {
   margin-left: 1em;
 }
 
-nav .dash-header h1 {
+nav .dash-header h2 {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  margin: 0;
 }
 
 nav > div:last-child {
@@ -1109,6 +1105,10 @@ nav.hide {
   margin: 0 auto;
 }
 
+.explore h2 {
+  margin: 0 auto;
+}
+
 .explore .fitness-feature {
   background-image: url(assets/fitness-basics.png);
   background-position: center top;
@@ -1193,6 +1193,10 @@ nav.hide {
   background-repeat: no-repeat;
 }
 
+.chat h2 {
+  margin: 0 auto;
+}
+
 .chat .container-content {
   border-bottom: 0.125em #FFFFFF solid;
   padding-bottom: 0;
@@ -1200,6 +1204,10 @@ nav.hide {
 
 .chat .container-content:hover {
   background-color: rgba(0, 0, 0, 0.03);
+}
+
+.profile h2 {
+  margin: 0 auto;
 }
 
 .profile .dash-header + .container-content {

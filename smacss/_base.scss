@@ -40,18 +40,13 @@ $main-font: 'Roboto Condensed', sans-serif;
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
     color: $main-color;
     @include main-font(400);
 }
 
-h1 {
-    font-size: 1.3em;
-}
-
 h2 {
     font-size: 1.2em;
-    margin: 0.5em 0;
 }
 
 h3 {

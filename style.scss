@@ -91,10 +91,11 @@ nav {
             margin-left: 1em;
         }
 
-        h1 {
+        h2 {
             position: absolute;
             left: 50%;
             transform: translate(-50%);
+            margin: 0;
         }
     }
 
@@ -490,6 +491,10 @@ nav {
 //style specific to explore page
 
 .explore {
+
+    h2 {
+        margin: 0 auto;
+    }
     .fitness-feature {
         @include bg-image(url(assets/fitness-basics.png), center top);
     }
@@ -542,6 +547,11 @@ nav {
 //style specific to chat page
 
 .chat {
+
+    h2 {
+        margin: 0 auto;
+    }
+
     .container-content {
         border-bottom: 0.125em $light-color solid;
         padding-bottom: 0;
@@ -555,6 +565,11 @@ nav {
 //style specific to profile page
 
 .profile {
+
+    h2 {
+        margin: 0 auto;
+        
+    }
     .dash-header + .container-content {
         padding-bottom: 0;
     }
