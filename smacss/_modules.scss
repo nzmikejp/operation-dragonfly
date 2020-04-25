@@ -71,14 +71,14 @@
 
 .cta-round {
     @include flex(center, center);
-    width: 2.22em;
-    height: 2.22em;
+    width: 2.5em;
+    height: 2.5em;
     border: 0.1875em $main-color solid;
     border-radius: 1.3125em;
     transition: ease 0.3s all;
 
     i {
-        font-size: 1em;
+        font-size: 1.2em;
         color: $main-color;
     }
 

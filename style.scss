@@ -184,6 +184,10 @@ nav {
         margin: 0 auto 1.5em auto;
     }
 
+    .heading-kiaora + h2 {
+        font-size: 1.35em;
+    }
+
     h5 {
         margin: 1em 0;
     }
@@ -445,17 +449,17 @@ nav {
     }
 
     .mood-dial {
-        padding-top: 1em;
+        padding-top: 2em;
         position: relative;
     }
 
     .mood-select {
         @include flex(space-between, center);
-        width: 14.5em;
+        width: 16em;
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate(-49%, 9.25em);
+        transform: translate(-49%, 10.28em);
     }
 
     .cta-large {
@@ -463,7 +467,7 @@ nav {
         height: 4.25rem;
         border-radius: 2.15rem;
         background-color: $main-color;
-        font-size: 1.2em;
+        font-size: 0.85em;
         color: $light-color;
         @include main-font(400);
         cursor: pointer;
@@ -478,6 +482,10 @@ nav {
         position: absolute;
         top: 1em;
         left: 0;
+    }
+
+    .card + .container-content {
+         padding-bottom: 1em;
     }
 
     .container-content:last-child {
@@ -571,7 +579,7 @@ nav {
 
     }
     .dash-header + .container-content {
-        padding-bottom: 0;
+        padding: 0.7em 1.2em;
     }
 
     .link-list + .container-content {
