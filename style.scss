@@ -43,7 +43,7 @@ $main-font: 'Roboto Condensed', sans-serif;
 }
 
 header {
-    min-height: 3em;
+    min-height: 1.8em;
     box-shadow: 0px 10px 30px -20px rgba(0,0,0,0.2);
     position: relative;
     z-index: 80;
@@ -63,7 +63,7 @@ main {
 }
 
 footer {
-    min-height: 3.7em;
+    min-height: 3em;
     box-shadow: 0px -10px 30px -20px rgba(0,0,0,0.2);
     position: relative;
 }
@@ -138,14 +138,14 @@ footer {
 
 .cta-round {
     @include flex(center, center);
-    width: 2.625em;
-    height: 2.625em;
+    width: 2.22em;
+    height: 2.22em;
     border: 0.1875em $main-color solid;
     border-radius: 1.3125em;
     transition: ease 0.3s all;
 
     i {
-        font-size: 1.2em;
+        font-size: 1em;
         color: $main-color;
     }
 
@@ -155,6 +155,37 @@ footer {
         i {
             color: $light-color;
         }
+    }
+}
+
+.checkbox{
+    width: 2.5em;
+    height: 2.5em;
+
+    input{
+        display: none;
+    }
+
+    label{
+        border: 0.1em $light-color-40 solid;
+        display: block;
+        border-radius: 2em;
+        transition: all ease 0.5s;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    label:before{
+        content: url(./assets/i-check.svg);
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0.5em;
+    }
+
+    input:checked + label:before{
+        display: block;
     }
 }
 
@@ -393,18 +424,18 @@ form {
     text-align: center;
     background-color: $light-color-40;
     border-bottom: 0.125em solid $light-color;
-    min-height: 3.2em;
+    min-height: 2.5em;
 
     h1 {
         margin: 0 auto;
         display: block;
-        font-size: 1.25em;
+        font-size: 1.1em;
     }
 }
 
 .profile-card {
     @include flex(space-between, center);
-    padding: 1em 0;
+    padding: 0.6em 0;
 
     .profile-wrapper {
         @include flex(flex-start, center)
@@ -423,6 +454,7 @@ form {
             text-align: left;
             margin: 0;
             line-height: 130%;
+            font-size: 0.9em;
         }
 
         p {
@@ -441,7 +473,8 @@ form {
         bottom: 0;
         width: 100%;
         border-bottom: $light-color 0.2em solid;
-        box-shadow: 0 0.25em 0.375em rgba(0,0,0,0.1);
+        box-shadow: 0 0.3em 0.4em rgba(0,0,0,0.15),
+                     0 -0.25em 0.375em rgba(0,0,0,0.05);
 
     }
 }
@@ -514,7 +547,6 @@ header {
     }
 
     .i-logo {
-        height: 1.8em;
         margin: 0;
     }
 
@@ -797,7 +829,7 @@ nav {
     }
 
     .challenge-select {
-        margin: 0 0.8em;
+        margin: 0 1.3em;
         
         .card-item {
             &:nth-child(1) {
@@ -847,6 +879,10 @@ nav {
     .cta {
         margin-top: 1em;
     }
+
+    .checkbox {
+        margin: 0.5em auto;
+    }
 }
 
 //style specific to dashboard page
@@ -868,10 +904,14 @@ nav {
 
     h1 {
         margin-bottom: 0.3em;
+        font-size: 1.1em;
     }
 
     h5 {
        margin: 0;
+       font-size: 0.8em;
+       width: 85%;
+       margin: 0 auto;
     }
 
     h3 {
@@ -942,7 +982,7 @@ nav {
 
     .mood-select {
         @include flex(space-between, center);
-        width: 16em;
+        width: 14.5em;
         position: absolute;
         top: 0;
         left: 50%;
