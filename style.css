@@ -286,7 +286,7 @@ form .form-group label {
       -ms-flex-align: start;
           align-items: flex-start;
   text-align: left;
-  margin: 1em 0 0.5em 0;
+  margin: 1.5em 0 0.5em 0;
 }
 
 .v-card .v-card-header h3 {
@@ -331,18 +331,19 @@ form .form-group label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: left;
 }
 
 .v-card .v-card-cta h3 {
   margin: 0;
   font-size: 0.8em;
+  text-align: left;
 }
 
 .v-card .v-card-cta p {
   margin: 0;
   font-size: 0.6em;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .v-card .v-card-section {
@@ -383,6 +384,7 @@ form .form-group label {
   border-radius: 0.4em;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .v-card .v-card-image:after {
@@ -1090,6 +1092,62 @@ nav.hide {
 
 .explore .fitness-image-3 {
   background-image: url(assets/fitness-10k.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .breathing-feature {
+  background-image: url(assets/breathing-basics.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .breathing-image-1 {
+  background-image: url(assets/breathing-baby.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .breathing-image-2 {
+  background-image: url(assets/breathing-abdominal.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .breathing-image-3 {
+  background-image: url(assets/breathing-yoga.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .nutrition-feature {
+  background-image: url(assets/nutrition-basics.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .nutrition-image-1 {
+  background-image: url(assets/nutrition-gofig.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .nutrition-image-2 {
+  background-image: url(assets/nutrition-healthy-eating.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore .nutrition-image-3 {
+  background-image: url(assets/nutrition-lunch.png);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;

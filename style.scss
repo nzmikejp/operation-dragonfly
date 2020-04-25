@@ -260,7 +260,7 @@ form {
     .v-card-header {
         @include flex(space-between, flex-start);
         text-align: left; 
-        margin: 1em 0 0.5em 0;
+        margin: 1.5em 0 0.5em 0;
 
         h3 {
             margin: 0;
@@ -285,17 +285,18 @@ form {
         border-radius: 0.4em 0.4em 0.4em 0;
         background-color: rgba(255,255,255,0.9);
         @include flex(flex-start, center);
-        text-align: left;
 
         h3 {
             margin: 0;
             font-size: 0.8em;
+            text-align: left;
         }
 
         p {
             margin: 0;
             font-size: 0.6em;
             text-transform: uppercase;
+            text-align: left;
         }
     }
 
@@ -327,6 +328,7 @@ form {
         border-radius: 0.4em;
         position: relative;
         overflow: hidden;
+        cursor: pointer;
         
         &:after {
             content: "";
@@ -994,6 +996,38 @@ nav {
 
     .fitness-image-3 {
         @include bg-image(url(assets/fitness-10k.png), center top);
+    }
+
+    .breathing-feature {
+        @include bg-image(url(assets/breathing-basics.png), center top);
+    }
+
+    .breathing-image-1 {
+        @include bg-image(url(assets/breathing-baby.png), center top);
+    }
+
+    .breathing-image-2 {
+        @include bg-image(url(assets/breathing-abdominal.png), center top);
+    }
+
+    .breathing-image-3 {
+        @include bg-image(url(assets/breathing-yoga.png), center top);
+    }
+
+    .nutrition-feature {
+        @include bg-image(url(assets/nutrition-basics.png), center top);
+    }
+
+    .nutrition-image-1 {
+        @include bg-image(url(assets/nutrition-gofig.png), center top);
+    }
+
+    .nutrition-image-2 {
+        @include bg-image(url(assets/nutrition-healthy-eating.png), center top);
+    }
+
+    .nutrition-image-3 {
+        @include bg-image(url(assets/nutrition-lunch.png), center top);
     }
 }
 
